@@ -69,7 +69,7 @@ public class MenuReservas {
 
     private void cadastrarReserva() {
         try {
-            System.out.print("Digite o CPF do cliente: ");
+            System.out.print("Digite o cpff do cliente: ");
             String cpf = scanner.nextLine();
             Cliente cliente = admin.buscarCliente(cpf);
 

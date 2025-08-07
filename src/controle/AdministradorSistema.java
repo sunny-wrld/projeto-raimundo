@@ -20,7 +20,7 @@ public class AdministradorSistema implements Serializable {
     public void cadastrarCliente(Cliente cliente) throws ClienteJaCadastradoException {
         Cliente clienteExistente = repositorioClientes.buscarCliente(cliente.getCpf());
         if (clienteExistente != null) {
-            throw new ClienteJaCadastradoException("Cliente ja cadastrado com este CPF");
+            throw new ClienteJaCadastradoException("Cliente ja cadastrado com este cpf");
         }
         repositorioClientes.adicionarCliente(cliente);
     }
