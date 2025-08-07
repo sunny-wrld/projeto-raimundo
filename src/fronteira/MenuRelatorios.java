@@ -63,7 +63,7 @@ public class MenuRelatorios {
             System.out.println("Nenhuma reserva encontrada para este cliente");
         } else {
             for (Reserva r : reservas) {
-                System.out.println("Reserva ID: " + r.getId() + " | Espaco: " + r.getEspaco().getNome() + " | Data: " + r.getData());
+                System.out.println("Reserva id: " + r.getId() + " | Espaco: " + r.getEspaco().getNome() + " | Data: " + r.getData());
             }
         }
     }

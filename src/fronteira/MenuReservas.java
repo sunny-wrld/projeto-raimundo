@@ -62,8 +62,8 @@ public class MenuReservas {
             System.out.println("Cliente: " + reserva.getCliente().getNome());
             System.out.println("Espaco: " + reserva.getEspaco().getNome());
             System.out.println("Data: " + reserva.getData());
-            System.out.println("Hora: " + reserva.getHoraInicio() + " - " + reserva.getHoraFim());
-            System.out.println("Valor: R$ " + reserva.calcularValorTotal());
+            System.out.println("Hora: " + reserva.getHoraInicio() + reserva.getHoraFim());
+            System.out.println("Valor: " + reserva.calcularValorTotal());
         }
     }
 
@@ -73,19 +73,20 @@ public class MenuReservas {
             String cpf = scanner.nextLine();
             Cliente cliente = admin.buscarCliente(cpf);
 
-            System.out.print("Digite o ID do espaco: ");
+            System.out.print("Digite o id do espaco: ");
             String espacoId = scanner.nextLine();
             Espaco espaco = admin.buscarEspaco(espacoId);
 
-            System.out.print("Digite a data da reserva (yyyy-mm-dd): ");
+            //formato bd
+            System.out.print("Digite a data da reserva: ");
             String data = scanner.nextLine();
             java.time.LocalDate dataReserva = java.time.LocalDate.parse(data);
 
-            System.out.print("Digite a hora de inicio (HH:mm): ");
+            System.out.print("Digite a hora de inicio: ");
             String horaInicio = scanner.nextLine();
             java.time.LocalTime inicio = java.time.LocalTime.parse(horaInicio);
 
-            System.out.print("Digite a hora de fim (HH:mm): ");
+            System.out.print("Digite a hora de fim: ");
             String horaFim = scanner.nextLine();
             java.time.LocalTime fim = java.time.LocalTime.parse(horaFim);
 
